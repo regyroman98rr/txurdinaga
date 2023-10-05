@@ -16,18 +16,107 @@ body{
     align-items: center;
     display: flex;
     justify-content: center;
-    height: 100vh;
+    height: 70vh;
+    font-family: 'PT Sans Narrow', sans-serif;
     
 
 }
 footer{
+    height: 40%;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
+    background-color: rgb(154, 154, 235);
+    padding-left: 15px;
 }
 
 .direccion{
     font-style: italic;
     color: #57aa26;
+    padding-left: 15px;
+}
+.cp{
+    font-style: italic;
+    color: #fcb900;
+    padding-left: 15px;;
+}
+.telefono{
+    font-style: italic;
+    color: #8ed1fc;
+    padding-left: 15px;
+}
+.correo{
+    font-style: italic;
+    color: #9b51e0;
+    padding-left: 15px;vh;
+}
+img.logo{
+    width: 20vh;
+    height: 15vh;
+}
+
+.politica{
+    color: var(--rojo-titulo, #E20035);
+
+
+font-family: Nunito;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.5rem; /* 150% */
+
+padding-top: 20px;
+
+}
+
+.cookie{
+    color: var(--Amarillo-titulo, #FCC204);
+
+    /* Body Medium/400 */
+    font-family: Nunito;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; /* 150% */
+}
+
+.mapa{
+    color: var(--color-titulo, #1AA3BF);
+
+/* Body Medium/400 */
+font-family: Nunito;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.5rem; /* 150% */
+
+}
+
+.contacto{
+    color: var(--verde-titulo, #57AA26);
+
+/* Body Medium/400 */
+font-family: Nunito;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.5rem; /* 150% */
+
+}
+
+.cont1{
+    position: relative;
+  display: inline-block;
+  width: 20%;
+  background-color: #57AA26;
+}
+
+.cont2{
+    position: relative;
+  display: inline-block;
+  width: 25%;
+  background-color: black;
+  text-align: center;
+  padding-top: 0;
 }
