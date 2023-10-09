@@ -134,6 +134,7 @@ font-weight: 400;
 line-height: 3rem; /* 120% */
 }
 .warnings{
+    
     width: 200px;
     text-align: center;
     margin: auto;

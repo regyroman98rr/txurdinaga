@@ -1,13 +1,56 @@
-const nombre = document.getElementById("name")
-const user = document.getElementById("user")
-const correo = document.getElementById("correo")
-const form = document.getElementById("form")
-const parrafo = document.getElementById("warnings")
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("form");
+    const warnings = document.getElementById("warnings");
 
-form.addEventListener("submit", e=>{
-    
-    if(nombre.Value.length == 0){
-        alert("No puedes dejar el campo vacio")
-        e.preventDefault();
-    }
+    form.addEventListener("submit", function (event) {
+        // Detiene el envío del formulario
+        event.preventDefault();
+
+        // Realiza la validación de los campos aquí
+        const name = document.getElementById("name").value.trim();
+        const user = document.getElementById("user").value.trim();
+        const correo = document.getElementById("correo").value.trim();
+        const checkbox = document.getElementById("checkbox").value.trim();
+        const contrasena = document.getElementById("contrasena").value.trim();
+        const contrasena1 = document.getElementById("contrasena1").value.trim();
+
+
+        // Restablece los mensajes de advertencia
+        warnings.innerHTML = "";
+
+        // Realiza las validaciones que desees
+        if (name === "") {
+            warnings.innerHTML += "Por favor, ingresa tu nombre completo.<br>";
+        }
+
+        if (user === "") {
+            warnings.innerHTML += "Por favor, ingresa un nombre de usuario.<br>";
+        }
+
+        if (correo === "") {
+            warnings.innerHTML += "Por favor, ingresa un correo electrónico.<br>";
+        }
+        if (contrasena === "") {
+            warnings.innerHTML += "Por favor, ingresa una contraseña.<br>";
+        }
+        if (contrasena1=== "" || contrasena1!=contrasena) {
+            warnings.innerHTML += "Por favor, confirma la contraseña.<br>";
+        }
+        if (checkbox.checked){
+            alert("Has aceptado los términos y condiciones.");
+        }
+        else{
+            warnings.innerHTML += "Tienes que aceptar los terminos.<br>";
+        }
+
+
+        // Si hay mensajes de advertencia, no se envía el formulario
+        if (warnings.innerHTML !== "") {
+            return false;
+        }
+
+        // Si la validación pasa, puedes enviar el formulario
+        form.submit();
+    });
 });
+
