@@ -13,22 +13,21 @@ document.addEventListener("DOMContentLoaded", function () {
         const checkbox = document.getElementById("checkbox");
         const contrasena = document.getElementById("contrasena").value.trim();
         const contrasena1 = document.getElementById("contrasena1").value.trim();
+        var validEmail =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
 
 
         // Restablece los mensajes de advertencia
         warnings.innerHTML = "";
 
-        // Realiza las validaciones que desees
-        if (name === "" && user === "" && correo === "" && contrasena === "" && contrasena1 === "" && contrasena1 === "" ) {
+        // Comprobacion que no dejas ningun campo del formulario sin rellenar
+        if (name === "" || user === "" || correo === "" || contrasena === "" || contrasena1 === "" || contrasena1 === "" ) {
             warnings.innerHTML += "Porfavor debes de rellenar todo el formulario completo .<br>";
         }
-        
+        // Comprobacion de que las contraseñas coinciden
         if(contrasena != contrasena1){
             warnings.innerHTML += "Las contraseñan no coinciden<br><br>";
         }
-        
-       
-        
+        //Comprobacion de que el boton de que has leido los termines esta pulsado o no 
         if (checkbox.checked){
             
             alert("Has aceptado los términos y condiciones.");
@@ -36,6 +35,28 @@ document.addEventListener("DOMContentLoaded", function () {
         else{
             warnings.innerHTML += "Tienes que aceptar los terminos.<br>";
         }
+        //Comprobacion de que el nombre de la persona es mayor de 3 caracteres y no esta conformado por ninguno numero
+        if (name.length >= 3 && !/\d/.test(name)) {
+            console.log("HEYYY");
+        } else {
+            alert("El nombre tiene que tener mas de 3 caracteres y  no puede tener numeros.");
+            mensaje.textContent = "El nombre debe tener al menos tres caracteres y no debe contener números.";
+        }
+        //Comprobacion de que el nombre de la persona es mayor de 3 caracteres y no esta conformado por ninguno numero
+        if (user.length >= 3 && !/\d/.test(user)) {
+            console.log("HEYYYdsaas");
+        } else {
+            alert("El nombre tiene que tener mas de 3 caracteres y  no puede tener numeros.");
+            mensaje.textContent = "El nombre debe tener al menos tres caracteres y no debe contener números.";
+        }
+        
+        if( validEmail.test(correo.value) ){
+            alert('Email is valid, continue with form submission');
+            
+        }else{
+            alert('Email is invalid, skip form submission');
+        }
+            
 
         // Si hay mensajes de advertencia, no se envía el formulario
         if (warnings.innerHTML !== "") {

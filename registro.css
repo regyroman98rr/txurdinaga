@@ -67,7 +67,7 @@ line-height: 2rem; /* 160% */
     background-color: aqua;
     
     display: inline-block;
-    width: 50%;
+    width: 100%;
     height: auto;
     justify-content: space-between;
     align-items: center;
