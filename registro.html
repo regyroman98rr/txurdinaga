@@ -1,40 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="registro.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
+    
+    <title>Document</title>
 </head>
 <body>
-    <div id="container">
-        <form class="login">
-            <!-- Nombre de usuario -->
-            <label for="name"> Nuevo Usuario</label>
-            <br>
-            <input type="name">
-            <br>
-            <br>
-            <!-- Password -->
-            <label for="username">Contraseña</label>
-            <br>
-            <input type="password">
-            <br>
-            <br>
-            <label for="email">Correo Electronico</label>
-            <br>
-            <input type="email">
-            <br>
-            <br>
-            <lable for="telefono">Numero de telefono</label>
-            <br>
-            <br>
-            <input type="telefono">
-            </div>
-        </form>       
+    <div class="cabecera">
+        <p class="cabTxt">Iniciar Sesion</p>
     </div>
+    <div class="contenedor">
+    <div class="opciones">
+        
 
+        <p id="an1"> <i class="fa fa-user"></i> Gestiona Tus Anuncios y Noticias</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo vel ligula.</p>
 
+        <p id="an1"> <i class="fa fa-pencil"></i>
+            Comenta tus Anuncios Favoritos</p>
+        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+
+        <p id="an1"> <i class="fa fa-regular fa-users"></i> Muestra a cientos de Estudiantes</p>
+        <p>Maecenas ornare mauris vitae purus vestibulum, vel tincidunt tortor convallis.</p>
+
+    </div>
+    
+    <div class="formulario">
+    <p id="titulo">Crear Cuenta</p>
+    <p>Crear una cuenta con tu email</p>
+
+    <label class="name" for="name"><input type="name" placeholder=" Nombre completo"></label>
+    <br>
+    <br>
+    <label class="name" for="name"><input type="user" placeholder=" Nombre de Usuario"></label>
+    <br>
+    <br>
+    <label class="name" for="name"><input type="correo" placeholder=" Correo Electronico"></label>
+    <br>
+    <br>
+    <label class="contraseña" for="contraseña"><input type="contraseña" placeholder="Contraseña"></label>
+    <br>
+    <br>
+    <label class="contraseña" for="contraseña"><input type="contraseñaconfirmar" placeholder="Confirmar Contaseña"></label>
+    <br>
+    <br>
+    <input type="checkbox"><label class="check" for="checkbox">Confirmo que he leido la  <a href="https://www.mozilla.org/es-ES/">Politica de privacidad 
+
+    </a>y los <a href="https://www.mozilla.org/es-ES/">Terminos & Condiciones </a></label>
+        <p>
+             Ya tienes una cuenta? 
+            <a href="https://www.mozilla.org/es-ES/">Crear una Cuenta</a>
+        </p>
+    </label>
+
+    <button type="submit">Crear una Cuenta →</button>
+
+    </div>
+</div>
 
 </body>
 </html>
