@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const name = document.getElementById("name").value.trim();
         const user = document.getElementById("user").value.trim();
         const correo = document.getElementById("correo").value.trim();
-        const checkbox = document.getElementById("checkbox").value.trim();
+        const checkbox = document.getElementById("checkbox");
         const contrasena = document.getElementById("contrasena").value.trim();
         const contrasena1 = document.getElementById("contrasena1").value.trim();
 
@@ -19,30 +19,23 @@ document.addEventListener("DOMContentLoaded", function () {
         warnings.innerHTML = "";
 
         // Realiza las validaciones que desees
-        if (name === "") {
-            warnings.innerHTML += "Por favor, ingresa tu nombre completo.<br>";
+        if (name === "" && user === "" && correo === "" && contrasena === "" && contrasena1 === "" && contrasena1 === "" ) {
+            warnings.innerHTML += "Porfavor debes de rellenar todo el formulario completo .<br>";
         }
-
-        if (user === "") {
-            warnings.innerHTML += "Por favor, ingresa un nombre de usuario.<br>";
+        
+        if(contrasena != contrasena1){
+            warnings.innerHTML += "Las contraseñan no coinciden<br><br>";
         }
-
-        if (correo === "") {
-            warnings.innerHTML += "Por favor, ingresa un correo electrónico.<br>";
-        }
-        if (contrasena === "") {
-            warnings.innerHTML += "Por favor, ingresa una contraseña.<br>";
-        }
-        if (contrasena1=== "" || contrasena1!=contrasena) {
-            warnings.innerHTML += "Por favor, confirma la contraseña.<br>";
-        }
+        
+       
+        
         if (checkbox.checked){
+            
             alert("Has aceptado los términos y condiciones.");
         }
         else{
             warnings.innerHTML += "Tienes que aceptar los terminos.<br>";
         }
-
 
         // Si hay mensajes de advertencia, no se envía el formulario
         if (warnings.innerHTML !== "") {
