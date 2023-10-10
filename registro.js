@@ -28,8 +28,15 @@ document.addEventListener("DOMContentLoaded", function () {
         else{
             correcto.innerHTML += "Has rellenado todos los campos .<br>"
         }
+        //Contraseña si cumple un formato de contraseña , teniendo que ser mayor de 8 caracteres , con minuscula y mayuscula
+        if(contrasena.length>8 && contrasena.match(/[a-z]/) && contrasena.match(/[A-Z]/) && contrasena.match(/\d/)){
+            console.log("Estoy vivo");
+        }
+        else{
+            warnings.innerHTML += "La contraseña no cumple los requisitos"
+        }
         // Comprobacion de que las contraseñas coinciden
-        if(contrasena != contrasena1){
+        if(contrasena !== contrasena1){
             warnings.innerHTML += "Las contraseñan no coinciden<br><br>";
         }
         //Comprobacion de que el boton de que has leido los termines esta pulsado o no 
@@ -42,21 +49,21 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         //Comprobacion de que el nombre de la persona es mayor de 3 caracteres y no esta conformado por ninguno numero
         if (name.length >= 3 && !/\d/.test(name)) {
-            console.log("HEYYY");
+            console.log("Nombre validado");
         } else {
             alert("El nombre tiene que tener mas de 3 caracteres y  no puede tener numeros.");
             mensaje.textContent = "El nombre debe tener al menos tres caracteres y no debe contener números.";
         }
         //Comprobacion de que el usuario de la persona es mayor de 3 caracteres y no esta conformado por ninguno numero
         if (user.length >= 3 && !/\d/.test(user)) {
-            console.log("HEYYYdsaas");
+            console.log("Usuario Validado");
         } else {
             alert("El usuario tiene que tener mas de 3 caracteres y  no puede tener numeros.");
             mensaje.textContent = "El nombre debe tener al menos tres caracteres y no debe contener números.";
         }
         //Comprobacion de que el apellido de la persona es mayor de 3 caracteres y no esta conformado por ninguno numero
         if (name.length >= 3 && !/\d/.test(name)) {
-            console.log("HEYYY");
+            console.log("Apellido Validado");
         } else {
             alert("El apellido tiene que tener mas de 3 caracteres y  no puede tener numeros.");
             mensaje.textContent = "El apellido debe tener al menos tres caracteres y no debe contener números.";
