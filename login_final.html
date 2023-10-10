@@ -9,6 +9,7 @@
     <title>Document</title>
 </head>
 <body>
+    <script src="login.js" defer></script>
     <div class="cabecera">
         <p class="cabTxt">Iniciar Sesion</p>
     </div>
@@ -27,18 +28,18 @@
         <p>Maecenas ornare mauris vitae purus vestibulum, vel tincidunt tortor convallis.</p>
 
     </div>
-    
+    <form action="" method="POST" id="form">
     <div class="formulario">
     <p id="titulo">Iniciar Sesion</p>
     <p>Iniciar Sesion con tu email</p>
 
-    <label class="name" for="name"><input type="name" placeholder=" Usuario o  Email"></label>
+    <label class="name" for="correo"><input type="correo" id="correo" placeholder="Email"></label>
     <br>
     <br>
-    <label class="contraseña" for="contraseña"><input type="contraseña" placeholder="Contraseña"></label>
+    <label class="name" for="contrasena"><input type="password" id="contrasena" placeholder="Contraseña"></label>
     <br>
     <br>
-    <input type="checkbox"><label class="check" for="checkbox">Mantener Inciado <a href="https://www.mozilla.org/es-ES/">Olvide mi Contraseña</a></label>
+    <input type="checkbox"><label class="check" for="checkbox" id="checkbox">Mantener Inciado <a href="https://www.mozilla.org/es-ES/">Olvide mi Contraseña</a></label>
         <p>
              No tienes login ? 
             <a href="https://www.mozilla.org/es-ES/">Crear una cuenta</a>
@@ -46,8 +47,10 @@
     </label>
 
     <button type="submit">Sing In →</button>
+    <p class="warnings" id="warnings"></p>
 
     </div>
+    </form>
 </div>
 
 </body>

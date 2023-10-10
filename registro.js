@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Comprobacion que no dejas ningun campo del formulario sin rellenar
         if (name === "" || user === "" || correo === "" || contrasena === "" || contrasena1 === "" || contrasena1 === "" || apellido === "") {
-            warnings.innerHTML += "Porfavor debes de rellenar todo el formulario completo .<br>";
+            warnings.innerHTML += "Porfavor debes de rellenar todo el formulario completo .<br><br>";
         }
         // Mostrado como mensaje que se han rellenado todos los campos de manera correcta
         else{
