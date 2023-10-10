@@ -101,14 +101,14 @@ line-height: 2rem; /* 160% */
     border: 1px solid var(--gray-scale-50, #EDEFF5);
     background: var(--gray-scale-white, #FFF);
     display: inline-block;
-    width: 15rem;
+    width: 7rem;
     height: 1.5rem;
-    padding: 0.25rem 5.25rem 0.25rem 1.125rem;
+    padding: 0.25rem 5.25rem 0.25rem 0.25rem;
     align-items: center;
 }
 
 button{
-    
+    margin-left: 18%;
     display: flex;
     width: 20.25rem;
     padding: 0rem 2rem;
@@ -141,3 +141,12 @@ line-height: 3rem; /* 120% */
     color: red;
     padding-top: 20px;
 }
+
+.correcto{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: rgb(42, 197, 39);
+    padding-top: 20px;
+}
+

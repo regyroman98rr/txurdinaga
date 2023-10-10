@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Realiza la validación de los campos aquí
         const name = document.getElementById("name").value.trim();
         const user = document.getElementById("user").value.trim();
+        const apellido = document.getElementById("apellido").value.trim();
         const correo = document.getElementById("correo").value.trim();
         const checkbox = document.getElementById("checkbox");
         const contrasena = document.getElementById("contrasena").value.trim();
@@ -20,8 +21,12 @@ document.addEventListener("DOMContentLoaded", function () {
         warnings.innerHTML = "";
 
         // Comprobacion que no dejas ningun campo del formulario sin rellenar
-        if (name === "" || user === "" || correo === "" || contrasena === "" || contrasena1 === "" || contrasena1 === "" ) {
+        if (name === "" || user === "" || correo === "" || contrasena === "" || contrasena1 === "" || contrasena1 === "" || apellido === "") {
             warnings.innerHTML += "Porfavor debes de rellenar todo el formulario completo .<br>";
+        }
+        // Mostrado como mensaje que se han rellenado todos los campos de manera correcta
+        else{
+            correcto.innerHTML += "Has rellenado todos los campos .<br>"
         }
         // Comprobacion de que las contraseñas coinciden
         if(contrasena != contrasena1){
@@ -42,15 +47,23 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("El nombre tiene que tener mas de 3 caracteres y  no puede tener numeros.");
             mensaje.textContent = "El nombre debe tener al menos tres caracteres y no debe contener números.";
         }
-        //Comprobacion de que el nombre de la persona es mayor de 3 caracteres y no esta conformado por ninguno numero
+        //Comprobacion de que el usuario de la persona es mayor de 3 caracteres y no esta conformado por ninguno numero
         if (user.length >= 3 && !/\d/.test(user)) {
             console.log("HEYYYdsaas");
         } else {
-            alert("El nombre tiene que tener mas de 3 caracteres y  no puede tener numeros.");
+            alert("El usuario tiene que tener mas de 3 caracteres y  no puede tener numeros.");
             mensaje.textContent = "El nombre debe tener al menos tres caracteres y no debe contener números.";
         }
+        //Comprobacion de que el apellido de la persona es mayor de 3 caracteres y no esta conformado por ninguno numero
+        if (name.length >= 3 && !/\d/.test(name)) {
+            console.log("HEYYY");
+        } else {
+            alert("El apellido tiene que tener mas de 3 caracteres y  no puede tener numeros.");
+            mensaje.textContent = "El apellido debe tener al menos tres caracteres y no debe contener números.";
+        }
         
-        if( validEmail.test(correo.value) ){
+        
+        if( validEmail.test(correo) ){
             alert('Email is valid, continue with form submission');
             
         }else{
